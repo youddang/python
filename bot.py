@@ -3,7 +3,7 @@ import asyncio
 import datetime
 
 client = discord.Client()
-token = 'OTg5NTEzMzMxMzA2MDA0NTAw.Ginjmi.kUSA5jPolGIzCyOB5SnOb-zCXkt3fWq1qPsjZU'
+token = ''
 now = datetime.datetime.now()
 time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
 
@@ -31,7 +31,7 @@ async def on_message(msg):
             await msg.channel.send("정수 값을 넣어주세요.")
 # @client.event
 # async def on_message_delete(message):
-#     channel = client.get_channel(894138057811435530)
+#     channel = client.get_channel(input_channel_id)
 #     embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.author.mention} 채널 : {message.channel.mention}", color=0xFF0000)
 #     embed.add_field(name="삭제된 내용", value=f"내용 : {message.content}", inline=False)
 #     embed.set_footer(text=f"{message.guild.name} | {time}")
