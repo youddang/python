@@ -12,10 +12,10 @@ time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)
 async def on_message(msg):
 
     print(f"{msg.channel} {msg.author} - {msg.content}")
-    if "탄압" in msg.content:
+    if "" in msg.content:
         await msg.delete()
         await msg.channel.send(f"{msg.author.mention} 님이 모함하셨습니다.")
-    if "훈남" in msg.content:
+    if "" in msg.content:
         await msg.delete()
         await msg.channel.send(f"{msg.author.mention} 님이 기만하셨습니다.")
     if "test" in msg.content:
