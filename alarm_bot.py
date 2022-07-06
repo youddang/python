@@ -16,14 +16,16 @@ soup = BeautifulSoup(res.text, "lxml")
 
 compare_text_1 = soup.find("td", attrs={"class":"td-subject"})
 
+print(compare_text_1)
 while True:
     compare_text_2 = soup.find("td", attrs={"class":"td-subject"})
     if compare_text_1 == compare_text_2:
         time.sleep(30)
     else:
         @clt.event
-        async def on_ready(msg):
-            await msg.channel.send("새로운 공지사항이 올라왔습니다! 공지사항 홈페이지를 참고해 주세요.\n", url)
+        async def on_ready():
+            channel = clt.get_channel()
+            await channel.send("새로운 공지사항이 올라왔습니다! 공지사항 홈페이지를 참고해 주세요.\n", url)
         clt.run(token)
         time.sleep(30)
         break
