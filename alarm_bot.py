@@ -19,7 +19,7 @@ compare_text_1 = soup.find("td", attrs={"class":"td-subject"})
 print(compare_text_1)
 while True:
     compare_text_2 = soup.find("td", attrs={"class":"td-subject"})
-    if compare_text_1 == compare_text_2:
+    if (compare_text_1 == compare_text_2):
         time.sleep(30)
     else:
         @clt.event
